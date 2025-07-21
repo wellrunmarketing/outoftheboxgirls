@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OutOfTheBoxGirls.com - We Burn The Midnight Oil So You Stop Burning Money | 48-Hour Business Problem Solvers</title>
+    <meta name="description" content="OutOfTheBoxGirls.com delivers bold, practical business solutions within 48 hours for $499. High-impact problem-solving team for businesses that are stuck, sinking, or spinning their wheels. We don't float problems, we plug the leak.">
+    <meta name="keywords" content="business problem solving, 48 hour solutions, business consulting, stuck businesses, sinking businesses, spinning wheels, practical solutions, business leak plugging, midnight oil, stop burning money">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="OutOfTheBoxGirls.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: linear-gradient(135deg, #0F1419 0%, #1a1f2e 100%);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Animated Background Particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #FF1493;
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+            50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+        }
+
+        /* Header */
+        header {
+            position: relative;
+            z-index: 100;
+            padding: 20px 0;
+            background: rgba(15, 20, 25, 0.95);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-container {
+            text-align: center;
+            animation: logoGlow 3s ease-in-out infinite alternate;
+        }
+
+        .logo {
+            max-width: 300px;
+            height: auto;
+            filter: drop-shadow(0 0 20px rgba(255, 20, 147, 0.5));
+        }
+
+        @keyframes logoGlow {
+            0% { filter: drop-shadow(0 0 20px rgba(255, 20, 147, 0.5)); }
+            100% { filter: drop-shadow(0 0 30px rgba(255, 20, 147, 0.8)); }
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #0F1419 0%, #1a1f2e 50%, #0F1419 100%);
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://cdn1.genspark.ai/user-upload-image/gpt_image_generated/82c0e667-16d4-476b-b790-30726c9e71f1');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+            animation: backgroundPulse 8s ease-in-out infinite;
+        }
+
+        @keyframes backgroundPulse {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.05); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, #FF1493, #FF69B4, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: heroGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes heroGlow {
+            0%, 100% { text-shadow: 0 0 20px rgba(255, 20, 147, 0.5); }
+            50% { text-shadow: 0 0 40px rgba(255, 20, 147, 0.8); }
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            animation: subtitleFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes subtitleFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Dancing Money Hook */
+        .money-hook {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #1a1f2e 0%, #0F1419 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .money-text {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 40px;
+        }
+
+        .dancing-goodbye {
+            display: inline-block;
+            background: linear-gradient(45deg, #FF1493, #FF69B4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: dance 2s ease-in-out infinite;
+            font-size: 3rem;
+            font-weight: 900;
+            filter: drop-shadow(0 0 20px rgba(255, 20, 147, 0.8));
+        }
+
+        @keyframes dance {
+            0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+            25% { transform: translateY(-15px) rotate(5deg) scale(1.1); }
+            50% { transform: translateY(-10px) rotate(-5deg) scale(1.05); }
+            75% { transform: translateY(-20px) rotate(3deg) scale(1.1); }
+        }
+
+        /* Animated Stats */
+        .stats-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #0F1419 0%, #2a1f3d 50%, #0F1419 100%);
+            text-align: center;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .stat-item {
+            background: rgba(255, 20, 147, 0.1);
+            padding: 40px 30px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 20, 147, 0.3);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+            border-color: #FF1493;
+            box-shadow: 0 20px 40px rgba(255, 20, 147, 0.3);
+        }
+
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #FF1493;
+            animation: bounce 3s ease-in-out infinite;
+            display: block;
+            text-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 15px;
+            color: #ffffff;
+        }
+
+        /* Problem Statement */
+        .problem-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1a1f2e 0%, #0F1419 100%);
+            text-align: center;
+        }
+
+        .problem-section h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 40px;
+            background: linear-gradient(45deg, #FF1493, #FF69B4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: textGlow 3s ease-in-out infinite;
+        }
+
+        @keyframes textGlow {
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(255, 20, 147, 0.5)); }
+            50% { filter: drop-shadow(0 0 30px rgba(255, 20, 147, 0.8)); }
+        }
+
+        .problem-text {
+            font-size: 1.4rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Solution Overview */
+        .solution-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #0F1419 0%, #2a1f3d 50%, #0F1419 100%);
+            text-align: center;
+        }
+
+        .price-highlight {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #FF1493;
+            animation: pulsePink 2s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(255, 20, 147, 0.8);
+            display: block;
+            margin: 30px 0;
+        }
+
+        @keyframes pulsePink {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1a1f2e 0%, #0F1419 100%);
+        }
+
+        .process-section h2 {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 60px;
+            background: linear-gradient(45deg, #FF1493, #FF69B4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .process-card {
+            background: rgba(255, 20, 147, 0.1);
+            padding: 40px 30px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 20, 147, 0.3);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .process-card:hover {
+            transform: translateY(-15px);
+            border-color: #FF1493;
+            box-shadow: 0 25px 50px rgba(255, 20, 147, 0.3);
+        }
+
+        .process-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 20, 147, 0.1), transparent);
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        .process-icon {
+            font-size: 3rem;
+            color: #FF1493;
+            margin-bottom: 20px;
+            animation: iconFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .process-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #FF1493;
+        }
+
+        .process-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+
+        /* Team Video Section */
+        .team-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #0F1419 0%, #2a1f3d 50%, #0F1419 100%);
+            text-align: center;
+        }
+
+        .team-section h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 40px;
+            background: linear-gradient(45deg, #FF1493, #FF69B4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 4px solid #FF1493;
+            box-shadow: 0 20px 40px rgba(255, 20, 147, 0.3);
+            animation: videoPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes videoPulse {
+            0%, 100% { box-shadow: 0 20px 40px rgba(255, 20, 147, 0.3); }
+            50% { box-shadow: 0 30px 60px rgba(255, 20, 147, 0.5); }
+        }
+
+        .team-video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1a1f2e 0%, #0F1419 100%);
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #FF1493, #FF69B4);
+            color: #ffffff;
+            padding: 20px 50px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            animation: ctaPulse 3s ease-in-out infinite;
+            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.4);
+        }
+
+        @keyframes ctaPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 20px 40px rgba(255, 20, 147, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .money-text {
+                font-size: 1.8rem;
+            }
+            
+            .dancing-goodbye {
+                font-size: 2.2rem;
+            }
+            
+            .stats-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stat-number {
+                font-size: 3rem;
+            }
+            
+            .problem-section h2 {
+                font-size: 2.2rem;
+            }
+            
+            .price-highlight {
+                font-size: 3rem;
+            }
+            
+            .process-section h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading Animation */
+        .loading {
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* Gradient Backgrounds */
+        .gradient-bg-1 {
+            background: linear-gradient(135deg, #0F1419 0%, #1a1f2e 100%);
+        }
+
+        .gradient-bg-2 {
+            background: linear-gradient(135deg, #1a1f2e 0%, #0F1419 100%);
+        }
+
+        .gradient-bg-3 {
+            background: linear-gradient(135deg, #0F1419 0%, #2a1f3d 50%, #0F1419 100%);
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header class="loading">
+        <div class="container">
+            <div class="logo-container">
+                <img src="https://cdn1.genspark.ai/user-upload-image/gpt_image_generated/89798e52-514a-4d09-8d8a-b6004efd92c3" alt="OutOfTheBoxGirls.com Logo - 48 Hour Business Problem Solvers" class="logo">
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero loading">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>We Burn The Midnight Oil So You Stop Burning Money</h1>
+                <p class="hero-subtitle">High-Impact Problem-Solving Team for Businesses That Are Stuck, Sinking, or Spinning Their Wheels</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dancing Money Hook -->
+    <section class="money-hook loading">
+        <div class="container">
+            <div class="money-text">
+                People say that money talks...<br>
+                is the only thing you ever hear it say <span class="dancing-goodbye">goodbye?</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Animated Stats -->
+    <section class="stats-section loading">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-number">4</span>
+                    <div class="stat-label">Strategic Steps</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">36+</span>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <div class="stat-label">Midnight Oil Burning</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement -->
+    <section class="problem-section loading">
+        <div class="container">
+            <h2>If Your Business Feels Like It's Taking On Water</h2>
+            <div class="problem-text">
+                Don't expect a life jacket—we don't float problems, we plug the leak. OutOfTheBoxGirls.com is a high-impact problem-solving team for businesses that are stuck, sinking, or spinning their wheels. If you can't find a way up, through, or around your challenge—it's time to call us.
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Overview -->
+    <section class="solution-section loading">
+        <div class="container">
+            <h2>Bold, Practical Solutions</h2>
+            <div class="price-highlight">$499</div>
+            <p style="font-size: 1.5rem; margin-bottom: 30px;">We deliver bold, practical solutions within 48 hours for just $499, once you provide the details.</p>
+            <p style="font-size: 1.2rem; opacity: 0.9;">No endless consultations. No prolonged diagnostics. Just results.</p>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section loading">
+        <div class="container">
+            <h2>How We Plug The Leak</h2>
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="process-title">1. Rapid Assessment</h3>
+                    <p class="process-text">We dive deep into your challenge within hours, not days. Our team identifies the root cause while others are still scheduling meetings.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="process-title">2. Strategic Solutions</h3>
+                    <p class="process-text">Bold, practical solutions that address the real problem. We don't just patch symptoms—we fix the underlying issue.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="process-title">3. 48-Hour Turnaround</h3>
+                    <p class="process-text">While you sleep, we work. Our midnight oil approach ensures your solution is ready when you need it most.</p>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="process-title">4. Implementation Ready</h3>
+                    <p class="process-text">No theoretical fluff. Every solution comes with clear, actionable steps you can implement immediately.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Video Section -->
+    <section class="team-section loading">
+        <div class="container">
+            <h2>Meet The Team That Never Sleeps</h2>
+            <div class="video-container">
+                <video class="team-video" autoplay muted loop playsinline webkit-playsinline>
+                    <source src="https://cdn1.genspark.ai/user-upload-image/5/d4144678-c64f-47c2-97fa-ffd29a02d5b2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <p style="font-size: 1.3rem; margin-top: 30px; opacity: 0.9;">Four strategic minds, one mission: plugging your business leaks while you sleep.</p>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section loading">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 40px; background: linear-gradient(45deg, #FF1493, #FF69B4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Ready to Stop the Bleeding?</h2>
+            <p style="font-size: 1.4rem; margin-bottom: 40px; opacity: 0.9;">Don't let another day pass watching your money say goodbye. Get your $499 solution in 48 hours.</p>
+            <a href="#contact" class="cta-button">Get Your Solution Now</a>
+        </div>
+    </section>
+
+    <script>
+        // Particle System
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Smooth loading animation
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.loading');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Enhanced hover effects
+        function addHoverEffects() {
+            const cards = document.querySelectorAll('.process-card, .stat-item');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-15px) scale(1.02)';
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        }
+
+        // Initialize everything
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            addHoverEffects();
+            
+            // Trigger initial animations
+            setTimeout(() => {
+                animateOnScroll();
+            }, 100);
+        });
+
+        // Scroll animations
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Enhanced dancing goodbye effect
+        setInterval(() => {
+            const goodbye = document.querySelector('.dancing-goodbye');
+            if (goodbye) {
+                goodbye.style.textShadow = `0 0 ${Math.random() * 40 + 20}px rgba(255, 20, 147, ${Math.random() * 0.5 + 0.5})`;
+            }
+        }, 1000);
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"961c2a661f3ce2f0","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.7.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDnnbBMlp9oiJAFLEqTyc9iGhp9Se9MyQETl0T6F7S7L%2BojL9cUGMDwrZZtp6SMYiLVWdL9sOLD%2FL%2FA%2FTCFDuod7jHzKNnGIRya3ERzQaMJgir6RVrQxcDTn8tdW48G15iF85clnoeRN8wEvO2scfpoYlHgR6roisDWxlJhp3ZbCxI5v2ObPDnlqOE7NvXjLvGvo8NiikoA%2Fll%2B1tuHxU%2BIBl4EM0s%2FH3hT%2BYn6u7Yz7YqWoltHWpSdT%2BjUarGttIq7q7jK3uXsHFRxKMx3Untf%2FUV%2FCiYyblb9yYsHqNJhmtiuVKqYfyIq4t9qWb6QDAm%2B2pyjJrsAeyIyZiYb8mR6tuGJZ1%2BK1V7vf0Jlo71vY%2FlcB%2BLbplkcbPwZ4EUvyqxiy4EXU1j2l24XoNy7OyKH4dBytzX3yG2h9fcfS1FmGT02CNz1jZm9n3xdg%2B5AbXKEzt%2BNJwVcwZTFaALN1aNngWHNJXSszJdEB0W8D%2Bd3WZe0tJETZb0zOFMc6Gi8bBAWFo%2FSaTp%2F6yAXYMV7w07ZU%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDnnbBMlp9oiJAFLEqTyc9iGhp9Se9MyQETl0T6F7S7L+ojL9cUGMDwrZZtp6SMYiLVWdL9sOLD/L/A/TCFDuod7jHzKNnGIRya3ERzQaMJgir6RVrQxcDTn8tdW48G15iF85clnoeRN8wEvO2scfpoYlHgR6roisDWxlJhp3ZbCxI5v2ObPDnlqOE7NvXjLvGvo8NiikoA/ll+1tuHxU+IBl4EM0s/H3hT+Yn6u7Yz7YqWoltHWpSdT+jUarGttIq7q7jK3uXsHFRxKMx3Untf/UV/CiYyblb9yYsHqNJhmtiuVKqYfyIq4t9qWb6QDAm+2pyjJrsAeyIyZiYb8mR6tuGJZ1+K1V7vf0Jlo71vY/lcB+LbplkcbPwZ4EUvyqxiy4EXU1j2l24XoNy7OyKH4dBytzX3yG2h9fcfS1FmGT02CNz1jZm9n3xdg+5AbXKEzt+NJwVcwZTFaALN1aNngWHNJXSszJdEB0W8D+d3WZe0tJETZb0zOFMc6Gi8bBAWFo/SaTp/6yAXYMV7w07ZU=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    
